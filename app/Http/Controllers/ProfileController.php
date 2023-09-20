@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Http\Requests\update;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
     public function show()
     {
         return view('auth.profile');
+    }
+    public function anotherShow()
+    {
+        $id = auth()->id();
+        $user = User::find($id);
+        //-------------------------
+        $user2 = DB::table('users')->get();
+        //@dd($user);
+        return view('another', compact('user','user2'));
     }
 
     public function update(ProfileUpdateRequest $request)
