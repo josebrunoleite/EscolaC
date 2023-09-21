@@ -8,8 +8,9 @@ class Curso extends Model
 {
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'Autor',
+        'CodigoProd',
+        'Possui',
     ];
     protected $hidden = [
         'password',

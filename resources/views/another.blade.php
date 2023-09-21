@@ -24,10 +24,11 @@
                                 {{-- Rato Roeu a Roupa do Rei de Roma --}}
                             <p class="card-text">
                                 <h2>Model</h2>
-                                {{ $user}}
+                                {{ $user->name }}
                                 <br>
                                 <h2>Banco</h2>
                                 {{ $user2}}
+                                kljadjkjn
                 
                             </p>
                         </div>
