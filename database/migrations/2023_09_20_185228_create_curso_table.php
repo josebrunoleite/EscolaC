@@ -14,9 +14,14 @@ return new class extends Migration
         Schema::create('curso', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('Autor');
-            $table->string('CodigoProd')->unique();
-            $table->JSON('Possui');
+            $table->string('autor');
+            $table->string('pagamento');
+            $table->string('valor');
+            $table->string('tipo');
+            $table->string('codigoProd')->unique();
+            $table->JSON('possui');
+            $table->JSON('aula');
+            $table->JSON('prova');
             $table->text('referencia')->nullable();
             $table->timestamps();
         });
