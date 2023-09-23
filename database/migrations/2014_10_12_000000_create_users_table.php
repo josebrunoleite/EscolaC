@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('listadesejo')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->string('role')->nullable();
-
+            $table->string('role')->default('user');
         });
     }
 
