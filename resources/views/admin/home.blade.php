@@ -63,7 +63,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José 
 
                                             <br>
 
@@ -114,7 +114,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José 
 
                                             <br>
 
@@ -165,7 +165,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José
 
                                             <br>
 

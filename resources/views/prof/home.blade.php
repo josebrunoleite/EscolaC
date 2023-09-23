@@ -31,12 +31,12 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-around">
                 <div>
                   {{-- <a class="navbar-brand" href="#"></a>--}}
-                    <a href="#" class="btn btn-success m-1">Adicionar Novo Curso</a>
-                    <a href="#" class="btn btn-info m-1">Estatistica</a>
+                    <a href="#" class="btn btn-success m-1">Requisitar Um Novo Curso</a>
+                    <a href="#" class="btn btn-info m-1">Andamento do Curso</a>
                 </div>
                 <div class="align-content-end ">
                     
-                    <a href="#" class="btn btn-info m-1">Estatistica</a>
+                    <a href="#" class="btn btn-info m-1">Criar Aula</a>
                     <a href="#" class="btn btn-danger m-1">Sair</a>
                 </div>
             </nav>
@@ -48,7 +48,7 @@
             <!-- Primeira linha com 4 cards -->
             <div class="">
                 <div class="col-12 text-center mt-1">
-                    <h2>Painel Administradores</h2>
+                    <h2>Painel Do Professor</h2>
                     <div class="d-flex justify-content-center mt-1 flex-wrap">
 
                         <div class="card tamanho">
@@ -63,7 +63,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José
 
                                             <br>
 
@@ -114,7 +114,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José
 
                                             <br>
 
@@ -165,7 +165,7 @@
 
                                             <br>
 
-                                            Professor: José é Lindo
+                                            Professor: José 
 
                                             <br>
 

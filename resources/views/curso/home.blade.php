@@ -121,7 +121,7 @@
 
 
                 <div class="row">
-                    @for ($i = 0; $i < 3; $i++)
+                    @for ($i = 0; $i < 4; $i++)
                         <div class="col">
                             <div class="card shadow-sm">
                                 <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
@@ -154,9 +154,9 @@
         <hr>
 
         <!-- Título e segunda linha com 6 cards -->
-        <h2 class="text-center">Cursos Disponveis</h2>
+        <h2 class="text-center">Aba de Cursos</h2>
         <div class="text-center">
-            <h1>Bootstrap card tiled layout</h1>
+            <h1>Cursos Disponiveis</h1>
           </div>
             <div class="card-columns">
                 @for ($i = 0; $i < 3; $i++)
