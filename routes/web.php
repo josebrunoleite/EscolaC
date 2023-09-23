@@ -42,6 +42,9 @@ Route::middleware('auth')->group(function () {
 
     /* Prof */
     Route::get('homeProf', [\App\Http\Controllers\ProfController::class, 'homeProf'])->name('Prof.home');
+    Route::get('criarAula', [\App\Http\Controllers\ProfController::class, 'criarAula'])->name('Aula.create');
+    Route::get('criarProva', [\App\Http\Controllers\ProfController::class, 'criarProva'])->name('Prova.create');
+    Route::get('tabelaProva', [\App\Http\Controllers\ProfController::class, 'tabelaProva'])->name('Prova.tabela');
 
     /* Pagamento */
     Route::get('carrinho', [\App\Http\Controllers\PagamentoController::class, 'homeCarrinho'])->name('carrinho.home');

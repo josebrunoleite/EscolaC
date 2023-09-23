@@ -103,17 +103,17 @@
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('another.show') }}" class="nav-link">
+                        <a href="{{ route('Prova.create') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
+                            <p>Criar Prova</p>
                         </a>
                     </li>
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('another.show') }}" class="nav-link">
+                        <a href="{{ route('Aula.create') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
+                            <p>Criar Aula</p>
                         </a>
                     </li>
                 </ul>

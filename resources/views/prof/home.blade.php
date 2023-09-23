@@ -28,12 +28,14 @@
 @section('content')
     <div>
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-around">
                 <div>
+                  {{-- <a class="navbar-brand" href="#"></a>--}}
                     <a href="#" class="btn btn-success m-1">Adicionar Novo Curso</a>
-                </div>
-                <div class="n">
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
+                </div>
+                <div class="align-content-end ">
+                    
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
                     <a href="#" class="btn btn-danger m-1">Sair</a>
                 </div>
@@ -47,11 +49,11 @@
             <div class="">
                 <div class="col-12 text-center mt-1">
                     <h2>Painel Administradores</h2>
-                    <div class="mxter">
+                    <div class="d-flex justify-content-center mt-1 flex-wrap">
 
                         <div class="card tamanho">
                             <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
+                                <div class="d-flex justify-content-around ">
                                     <img src="{{ $image }}" style="width: 250px; height:114px">
                                     <div>
                                         <p class="card-text">
@@ -102,7 +104,7 @@
                         </div>
                         <div class="card tamanho">
                             <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
+                                <div class="d-flex justify-content-around ">
                                     <img src="{{ $image }}" style="width: 250px; height:114px">
                                     <div>
                                         <p class="card-text">
@@ -153,7 +155,7 @@
                         </div>
                         <div class="card tamanho">
                             <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
+                                <div class="d-flex justify-content-around ">
                                     <img src="{{ $image }}" style="width: 250px; height:114px">
                                     <div>
                                         <p class="card-text">
@@ -192,159 +194,6 @@
                                     <div>
                                         <div class="text-center">
                                             <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José é Lindo
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José é Lindo
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around flex-wrap">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José é Lindo
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center w-100">
-                                            <a href="#" class="btn btn-primary m-1 w-100">Liberar</a>
                                             <br>
                                             <a href="#" class="btn btn-success m-1">Informaçãos</a>
                                             <br>

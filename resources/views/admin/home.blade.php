@@ -28,13 +28,14 @@
 @section('content')
     <div>
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-around">
                 <div>
-                    <a class="navbar-brand" href="#">Navbar</a>
+                  {{-- <a class="navbar-brand" href="#"></a>--}}
                     <a href="#" class="btn btn-success m-1">Adicionar Novo Curso</a>
-                </div>
-                <div class="align-content-end">
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
+                </div>
+                <div class="align-content-end ">
+                    
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
                     <a href="#" class="btn btn-danger m-1">Sair</a>
                 </div>
@@ -48,7 +49,7 @@
             <div class="">
                 <div class="col-12 text-center mt-1">
                     <h2>Painel Administradores</h2>
-                    <div class="mxter">
+                    <div class="d-flex justify-content-center mt-1 flex-wrap">
 
                         <div class="card tamanho">
                             <div class="card-body">

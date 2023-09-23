@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('curso', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->int('liberado');
+            $table->string('nome');
             $table->string('autor');
             $table->string('pagamento');
             $table->string('valor');
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->JSON('possui');
             $table->JSON('aula');
             $table->JSON('prova');
+            $table->int('duracio');
             $table->text('referencia')->nullable();
             $table->timestamps();
         });
