@@ -48,7 +48,7 @@
                 <a href="{{ route('another.show') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card text-success"></i>
                     <p>
-                        Carinho
+                        Carrinho
                     </p>
                 </a>
             </li>
