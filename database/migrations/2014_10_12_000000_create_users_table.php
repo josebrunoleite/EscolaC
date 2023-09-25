@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('listadesejo')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->string('img')->nullable();
             $table->string('role')->default('user');
         });
     }

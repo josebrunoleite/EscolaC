@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('curso');
             $table->string('titulo');
-            $table->text('questao');
+            $table->JSON('questao');
             $table->JSON('respostas');
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }

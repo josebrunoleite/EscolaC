@@ -12,5 +12,6 @@ class provas extends Model
         'titulo',
         'questao',
         'respostas',
+        'img',
     ];
 }

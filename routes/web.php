@@ -34,7 +34,9 @@ Route::middleware('auth')->group(function () {
    
     /* Curso Mod */
     Route::get('cursos', [App\Http\Controllers\CursoController::class, 'cursoHome'])->name('cursoHome');
-
+    Route::get('cursosCreate', [App\Http\Controllers\CursoController::class, 'showCreateCurso'])->name('CreateCurso.show');
+    route::post('cursosStoreN', [App\Http\Controllers\CursoController::class, 'StoreCurso'])->name('Curso.store');
+    /* Profile Mod */
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::get('another', [\App\Http\Controllers\ProfileController::class, 'anotherShow'])->name('another.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
@@ -54,6 +56,8 @@ Route::middleware('auth')->group(function () {
     Route::get('deleteAula/{id}', [\App\Http\Controllers\CursoController::class, 'deleteAula'])->name('Aula.delete');
     Route::get('editAula/{id}', [\App\Http\Controllers\CursoController::class, 'showEditAula'])->name('Aula.editShow');
     Route::post('editAula2', [\App\Http\Controllers\CursoController::class, 'editAula'])->name('Aula.edit');
+    /* Questao */
+    Route::post('storeQuestao', [\App\Http\Controllers\CursoController::class, 'storeQuestao'])->name('Questao.store');
     /* Tabela */
     Route::get('tabelaAula', [\App\Http\Controllers\CursoController::class, 'showAula'])->name('Aula.tabela');
     /* Pagamento */

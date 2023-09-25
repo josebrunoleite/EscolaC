@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('curso');
             $table->string('provafeitas')->nullable();
             $table->string('aulafeitas')->nullable();
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }
