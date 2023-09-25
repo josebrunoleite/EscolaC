@@ -12,4 +12,10 @@ class UserController extends Controller
 
         return view('users.index', compact('users'));
     }
+    public function aula()
+    {
+        $users = User::paginate();
+
+        return view('aula');  
+      }
 }

@@ -94,7 +94,7 @@
                                             src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7q0K62SjSp3_kYTJsrDOVyIFvpmS-4rCBw&usqp=CAU' />
                                     </td>
                                     <td class="fw-bold">
-                                        João Lucas, ele é o manda-chuva do time, ele é responsavel também por comandar o
+                                        João Lucas, é corno e filho da gota! Ele é o manda-chuva do time, ele é responsavel também por comandar o
                                         grupo e não deixa-los perdidos em o que deve fazer, mas ele não só manda, ele também
                                         está com a mão na massa, seja com a parte de documentação ou da parte do código.
                                     </td>

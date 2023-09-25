@@ -14,6 +14,8 @@ class Aula extends Model
         'titulo',
         'aula',
         'video',
+        'comentarioautor',
         'presenca',
+        'update_at',
     ];
 }

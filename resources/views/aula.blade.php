@@ -1,17 +1,6 @@
 @extends('layouts.app')
+ <style>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Aulas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
 
         .container {
             display: flex;
@@ -20,11 +9,6 @@
             padding: 20px;
         }
 
-        .sidebar {
-            width: 25%;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
 
         .content {
             width: 75%;
@@ -35,14 +19,9 @@
             width: 100%;
             height: auto;
         }
-
-        .comments {
-            margin-top: 20px;
-        }
     </style>
-</head>
-<body>
-    <div class="container">
+@section('content')
+    <div class="container d-flex justify-content-bebetween">
         <div class="sidebar">
             <h2>Aulas</h2>
             <ul>
@@ -55,10 +34,7 @@
         </div>
         <div class="content">
             <h1>Aula 1 - Introdução</h1>
-            <video class="video" controls>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/2ZMFGPGGrwY?si=x1qwFdKuy2duOgRr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                Seu navegador não suporta vídeo HTML5.
-            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/toH7eTXOKug?si=gU-kFsiHlr-gEpaf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="comments">
                 <h3>Comentários</h3>
                 <form>
@@ -75,11 +51,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
-
-@section('content')
-
-
-
 @endsection

@@ -10,7 +10,7 @@
                     
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Adicionar Nova Aula</h3>
+                            <h3 class="card-title">Editar Aula</h3>
                         </div>
                         
                             @if (session('error'))
@@ -19,46 +19,46 @@
                             </div>
                             @endif
                             @if (session('success'))
-                            <div class="card-header card-color-sucess">
+                            <div class="card-header card-color-sucess text-center">
                             <h3 class="card-title">{{ session('success') }}</h3>
                         </div>
                             @endif
                        
-                        <form action="{{ route('Aula.store') }}" method="post">
+                        <form action="{{ url('editAula2') }}" method="post">
                             @csrf
-                            @method('POST')
                             <div class="card-body">
                                 <!-- Aula -->
+                                <input type="text" value="{{$aula->id}}" style="display: none;" name="id" id="id">
                                 <div class="form-group">
                                     <label for="nomeAula">Nome da Aula</label>
-                                    <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Digite o nome da aula">
+                                    <input type="text" value="{{$aula->titulo}}" class="form-control" name="titulo" id="titulo" placeholder="Digite o nome da aula">
                                 </div>
                                 <!-- Vídeo -->
                                 <div class="form-group">
                                     <label for="linkVideo">Link para o Vídeo</label>
-                                    <input type="text" class="form-control" name="video" id="video" placeholder="Cole o link do vídeo">
+                                    <input type="text" class="form-control" value="{{$aula->video}}" name="video" id="video" placeholder="Cole o link do vídeo">
                                 </div>
                                 <!-- Qual Tipo de Curso -->
                                     <div class="form-group">
                                         <label for="exampleSelect">Selecione uma opção:</label>
                                         <select class="form-control" name="curso" id="curso">
-                                            <option value="Eletronica">Eletronica</option>
-                                            <option value="Robotica">Robotica</option>
-                                            <option value="Analise de Sistema">Analise de Sistema</option>
+                                            <option value="Eletronica" {{ $aula->curso === 'Eletronica' ? 'selected' : '' }} >Eletronica</option>
+                                            <option value="Robotica" {{ $aula->curso === 'Robotica' ? 'selected' : '' }}>Robotica</option>
+                                            <option value="Analise de Sistema" {{ $aula->curso === 'Analise de Sistema' ? 'selected' : '' }}>Analise de Sistema</option>
                                         </select>
                                     </div>
-                                <!-- Descrição -->
+                                <!-- Descrição
                                 <div class="form-group">
                                     <label for="summernote">Conteúdo</label>
-                                    <textarea class="form-control" id="summernote" name="conteudo"></textarea>
-                                </div>
+                                    <textarea class="form-control" value="conteudo"id="summernote" name="conteudo"></textarea>
+                                </div> -->
                                     {{--<div class="form-group">
                                     <label for="conteudoSummernote">Conteúdo do Summernote</label>
                                     <textarea class="form-control" id="conteudoSummernote" name="conteudoSummernote"></textarea>
                                 </div> --}}
                                 <div class="form-group">
                                     <label for="comentarioAutor">Comentário do Autor</label>
-                                    <textarea class="form-control" name="comentarioAutor" id="comentarioAutor" rows="4" name="comentarioAutor" placeholder="Digite o comentário do autor"></textarea>
+                                    <textarea class="form-control" name="comentarioAutor" id="comentarioAutor" rows="4" name="comentarioAutor" placeholder="Digite o comentário do autor">{{$aula->comentarioautor}}</textarea>
                                 </div>
                             </div>
                             <div class="card-footer">

@@ -27,7 +27,8 @@ Route::middleware('auth')->group(function () {
 
     /* User Mod */
     Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
-    
+    Route::get('aula', [\App\Http\Controllers\UserController::class, 'aula'])->name('users.index');
+
     /* modder */
     Route::get('formulario', [App\Http\Controllers\HomeController::class, 'formulario'])->name('formulario');
    
@@ -43,9 +44,18 @@ Route::middleware('auth')->group(function () {
     /* Prof */
     Route::get('homeProf', [\App\Http\Controllers\ProfController::class, 'homeProf'])->name('Prof.home');
     Route::get('criarAula', [\App\Http\Controllers\ProfController::class, 'criarAula'])->name('Aula.create');
+    /* Prova */
     Route::get('criarProva', [\App\Http\Controllers\ProfController::class, 'criarProva'])->name('Prova.create');
-    Route::get('tabelaProva', [\App\Http\Controllers\ProfController::class, 'tabelaProva'])->name('Prova.tabela');
-
+    Route::get('tabelaAula', [\App\Http\Controllers\ProfController::class, 'tabelaAula'])->name('Aula.tabela');
+    
+    /* */
+    /* Aula */
+    Route::post('storeAula', [\App\Http\Controllers\CursoController::class, 'storeAula'])->name('Aula.store');
+    Route::get('deleteAula/{id}', [\App\Http\Controllers\CursoController::class, 'deleteAula'])->name('Aula.delete');
+    Route::get('editAula/{id}', [\App\Http\Controllers\CursoController::class, 'showEditAula'])->name('Aula.editShow');
+    Route::post('editAula2', [\App\Http\Controllers\CursoController::class, 'editAula'])->name('Aula.edit');
+    /* Tabela */
+    Route::get('tabelaAula', [\App\Http\Controllers\CursoController::class, 'showAula'])->name('Aula.tabela');
     /* Pagamento */
     Route::get('carrinho', [\App\Http\Controllers\PagamentoController::class, 'homeCarrinho'])->name('carrinho.home');
     /* Pessoal */
