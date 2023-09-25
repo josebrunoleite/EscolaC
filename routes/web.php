@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
     /* Curso Mod */
     Route::get('cursos', [App\Http\Controllers\CursoController::class, 'cursoHome'])->name('cursoHome');
     Route::get('cursosCreate', [App\Http\Controllers\CursoController::class, 'showCreateCurso'])->name('CreateCurso.show');
+    Route::get('cursosDelete/{id}', [App\Http\Controllers\ProfController::class, 'deleteCurso'])->name('DeleteCurso.show');
+    Route::get('cursosDelete/{id}', [App\Http\Controllers\ProfController::class, 'deleteCurso'])->name('DeleteCurso.show');
+
     route::post('cursosStoreN', [App\Http\Controllers\CursoController::class, 'StoreCurso'])->name('Curso.store');
     /* Profile Mod */
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');

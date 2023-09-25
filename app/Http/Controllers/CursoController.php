@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aula;
-use App\Models\Curso;
+use App\Models\cursos;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\DB;
@@ -143,47 +143,51 @@ class CursoController extends Controller
     {
         return view('prof.criacao.criarCurso');
     }
-    public function StoreCurso(Request $request)
-    {
+    public function StoreCurso(Request $request){
         $autor = auth()->user()->name;
         $selectedData = json_decode(request('selectedData'), true);
         $imagem = $request->file('imagem');
-        
+        //@dd($request->all());
         $nomeImagem = time() . '.' . $imagem->getClientOriginalExtension();
-        
-        //@dd($nomeImagem);
         $caminhoImagem = public_path('curso/' . $nomeImagem);
-        //@dd($caminhoImagem);
-        //die();
-        @dd($request->all());
-        /* try { */
-            $request->validate([
-                'name' => 'required',
+        /*echo 'olá';
+        $verd = $request->validate([
+            'nome' => 'required',
+            'curso' => 'required',
+            'tipo' => 'required',
+            'valor' => 'required',
+            'duracio'=> 'required',
+            'selectedData' => 'required',
+        ]);
+        echo '222';*/
+        //@dd($request->all(),$caminhoImagem,$nomeImagem, $verd);
+         try { 
+            /* $request->validate([
+                'liberado' => 'required',
                 'curso' => 'required',
-                'tipo' => 'required',
                 'valor' => 'required',
+                'tipo' => 'required',
                 'duracio'=> 'required',
-                'selectedData' => 'required',
-            ]);
-            Curso::create([
-                'liberado'=> $request->liberado ?? 'false',
+                'aula' => 'required',
+                'referencia' => 'required',
+                'autor' => 'required',
+                'img' => 'required',
+
+            ]); */
+            DB::table('cursos')->insert([
+                'liberado' => $request->liberado ?? 'false',
                 'nome' => $request->curso,
                 'valor' => $request->valor,
-                'tipo'=> $request->tipo,
-                'duracio'=> $request->duracio,
-                'aula' => $selectedData,
+                'tipo' => $request->tipo,
+                'duracio' => $request->duracio,
+                'aula' => json_encode($selectedData),
                 'referencia' => $request->referencia,
                 'autor' => $autor,
                 'img' => $caminhoImagem,
             ]);
-         /*    return redirect()->back()->with('success', 'Aula criada com sucesso!');
+          return redirect()->back()->with('success', 'Curso criada com sucesso!');
         } catch (\Throwable $th) {
-            return redirect()->back()->with('error', 'Aula não criada co sucesso!!', $th);
-        } */
+            return redirect()->back()->with('error', 'Curso não criada com sucesso!!', $th);
+        } 
     }
 }
-/*      
-   $imagem = $request->file('imagem');
-   $nomeImagem = time() . '.' . $imagem->getClientOriginalExtension();
-   $caminhoImagem = public_path('curso/' . $nomeImagem);
- */

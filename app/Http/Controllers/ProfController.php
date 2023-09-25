@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Aula;
+use App\Models\cursos;
 
 class ProfController extends Controller
 {
@@ -14,7 +15,8 @@ class ProfController extends Controller
     public function homeProf()
     {
         //echo "hola";
-        return view('prof.home');
+        $cursos = cursos::all();
+        return view('prof.home', compact('cursos'));
     }
     public function tabelaProva()
     {
@@ -71,5 +73,10 @@ class ProfController extends Controller
     {
         //echo "hola";
         return view('prof.criacao.criarProva');
+    }
+    public function deleteCurso($id){
+        $curso = cursos::findorfail($id);
+        $curso->delete();
+        return redirect()->back()->with('success', 'Curso deletado com sucesso!');
     }
 }

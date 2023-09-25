@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\cursos;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,6 +14,8 @@ class AdminController extends Controller
     public function homeAdmin()
     {
         //echo "hola";
-       return view('admin.home');
+       $cursos = cursos::all();
+       //@dd($cursos);
+       return view('admin.home', compact('cursos'));
     }
 }

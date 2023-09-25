@@ -49,11 +49,11 @@
                                         <option value="Analise de Sistema">Analise de Sistema</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="linkVideo">Resposta</label>
                                     <input type="text" name="resposta" class="form-control" id="resposta"
                                         placeholder="Qual é a reposta correta">
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <label for="linkVideo">Duração Media</label>
                                     <input type="text" name="duracio" class="form-control" id="duracio"
@@ -63,7 +63,7 @@
                                 <!-- Referencia -->
                                 <div class="form-group">
                                     <label for="linkVideo">Referencia</label>
-                                    <input type="text" name="Referencia" class="form-control" id="questao"
+                                    <input type="text" name="referencia" class="form-control" id="referencia"
                                         placeholder="Insira o titulo da questão">
                                 </div>
                                 {{-- <div class="form-group">

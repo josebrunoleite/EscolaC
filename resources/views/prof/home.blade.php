@@ -42,6 +42,8 @@
             </nav>
         </div>
     </div>
+    @php
+    @endphp
     {{-- <div class="content-wrapper"> --}}
     <section class="content">
         <div class="container-fluid">
@@ -50,24 +52,24 @@
                 <div class="col-12 text-center mt-1">
                     <h2>Painel Do Professor</h2>
                     <div class="d-flex justify-content-center mt-1 flex-wrap">
-
+                        @foreach ($cursos as $curso)
                         <div class="card tamanho">
                             <div class="card-body">
                                 <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
+                                    <img src="{{ $curso->img }}" style="width: 250px; height:114px">
                                     <div>
                                         <p class="card-text">
                                         <div>
 
-                                            Nome: José
+                                            Nome: {{$curso->nome}}
 
                                             <br>
 
-                                            Professor: José
+                                            Professor: {{$curso->autor}}
 
                                             <br>
 
-                                            tipo: Informatica
+                                            tipo: {{$curso->tipo}}
                                             </p>
                                         </div>
                                         </p>
@@ -76,132 +78,34 @@
                                         <p class="card-text">
                                         <div>
 
-                                            Duranção: 24H
+                                            Duranção: {{$curso->duracio ?? 'Sem nenhuma aula'}}
 
                                             <br>
 
-                                            Q.Alunos:
+                                            Q.Alunos: {{$curso->possui ?? 'Ninguem Comprou'}}
 
                                             <br>
 
-                                            Ultima Atualização:
+                                            Ultima Atualização: {{$curso->tipo}}
 
                                         </div>
                                         </p>
                                     </div>
                                     <div>
                                         <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
+                                            <a href="" class="btn btn-primary m-1">Liberar</a>
                                             <br>
                                             <a href="#" class="btn btn-success m-1">Informaçãos</a>
                                             <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
+                                            <a href="{{url('cursosDelete', $curso->id )}}" class="btn btn-danger m-1">Excluir</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José 
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        @endforeach
+        
 
                         </div>
                     </div>
