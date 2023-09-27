@@ -22,7 +22,7 @@
                 @enderror
             </div>
             <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control"   placeholder="{{ __('CPF') }}" required autocomplete="name" autofocus>
+                <input type="text" name="cpf" class="form-control"   placeholder="{{ __('CPF') }}" required autocomplete="name" autofocus>
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <span class="fas fa-user"></span>
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control"   placeholder="{{ __('Telefone') }}" required autocomplete="name" autofocus>
+                <input type="text" name="telefone" class="form-control"   placeholder="{{ __('Telefone') }}" required autocomplete="name" autofocus>
                 <div class="input-group-append">
                     <div class="input-group-text">
                         <span class="fas fa-user"></span>

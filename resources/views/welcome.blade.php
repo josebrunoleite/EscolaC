@@ -880,7 +880,7 @@
                 <h4 class="text-white m-auto">Agradecimento a todos pela colaboração no
                     desenvolvimento do site.</h4>
                 <p class="text-white m-auto">Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP
-                    v{{ PHP_VERSION }}) <br> Versão 0.6.6<br> © 2021 Company Super Nova.INC/José Bruno!</p>
+                    v{{ PHP_VERSION }}) <br> Versão 0.6.6<br> © 2021 Company Super Nova.INC!</p>
             </footer>
             <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0 ">
                 <!--Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
