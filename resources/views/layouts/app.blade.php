@@ -14,7 +14,22 @@
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
     @yield('styles')
 </head>
-<body class="hold-transition sidebar-mini">
+<style>
+    [class*=sidebar-dark-]  {
+        background-color: #005C53 ;
+    }
+    .content-wrapper{
+        background-color: #D6D58E;
+    }
+    .navbar-white{
+        background-color: #000000cc;
+    }
+    .navbar-white a{
+        background-color: white;
+        border-radius: 5px;
+    }
+</style>
+<body class="hold-transition sidebar-mini" style="background-color:#D6D58E;">
 <div class="wrapper">
 
     <!-- Navbar -->
