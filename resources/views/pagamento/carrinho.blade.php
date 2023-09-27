@@ -24,63 +24,20 @@
         <div class="container-fluid">
             <!-- Primeira linha com 4 cards -->
             <div class="row">
-                <div class="col-12 text-center mt-1">
+                <div class="col-12 text-center m-2">
                     <h2>Cursos adicionado no carrinho</h2>
                 </div>
-                <div class="col-md-2 mb-1">
+                @foreach ($cursos as $curso)
+                <div class="col-md-3 mb-1">
                     <div class="card text-center" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
+                        <img src="{{ asset('curso/' . $curso->img) }}" class="card-img-top" alt="Imagem">
                         <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
+                            <h5 class="card-title">{{$curso->nome}}</h5>
+                            <p class="card-text">{{$curso->pagamento}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 mb-1">
-                    <div class="card" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 mb-1">
-                    <div class="card" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 mb-1">
-                    <div class="card" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 mb-1">
-                    <div class="card" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 mb-1">
-                    <div class="card" style="width: 250px;">
-                        <img src="{{ $image }}" class="card-img-top" alt="Imagem">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome do Card 1</h5>
-                            <p class="card-text">Valor do Card 1</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
     </div>
     <div>

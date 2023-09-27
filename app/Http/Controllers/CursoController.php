@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aula;
 use App\Models\cursos;
+use App\Models\provas;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +17,8 @@ class CursoController extends Controller
         $this->middleware('auth');
     }
     public function cursoHome(){
-        return view('curso.home');
+        $cursos = cursos::where('liberado', 'true')->get();
+        return view('curso.home', compact('cursos'));
     }
     public function showEditAula($id){
         $presenca = auth()->user()->name;
@@ -72,7 +74,7 @@ class CursoController extends Controller
     }
     public function showAula()
     {
-        $aulas = Aula::all();
+        $aulas = Questaos::all();
         return view('tabelas.tabelasProva', compact('aulas'));
     }
     public function deleteAula($id)
@@ -141,15 +143,17 @@ class CursoController extends Controller
     }
     public function showCreateCurso()
     {
-        return view('prof.criacao.criarCurso');
+        $questaos = Questaos::all();
+        $provas = provas::all();
+        return view('prof.criacao.criarCurso', compact('questaos', 'provas'));
     }
     public function StoreCurso(Request $request){
         $autor = auth()->user()->name;
         $selectedData = json_decode(request('selectedData'), true);
-        $imagem = $request->file('imagem');
+        $imagem = $request->file('img');
         //@dd($request->all());
         $nomeImagem = time() . '.' . $imagem->getClientOriginalExtension();
-        $caminhoImagem = public_path('curso/' . $nomeImagem);
+        $imagem->move(public_path('curso'), $nomeImagem);
         /*echo 'olá';
         $verd = $request->validate([
             'nome' => 'required',
@@ -183,7 +187,7 @@ class CursoController extends Controller
                 'aula' => json_encode($selectedData),
                 'referencia' => $request->referencia,
                 'autor' => $autor,
-                'img' => $caminhoImagem,
+                'img' => $nomeImagem,
             ]);
           return redirect()->back()->with('success', 'Curso criada com sucesso!');
         } catch (\Throwable $th) {

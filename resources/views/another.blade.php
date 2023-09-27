@@ -23,12 +23,8 @@
                             <h5 class="card-title"></h5>
                                 {{-- Rato Roeu a Roupa do Rei de Roma --}}
                             <p class="card-text">
-                                <h2>Model</h2>
-                                {{ $user->name }}
-                                <br>
-                                <h2>Banco</h2>
-                                {{ $user2}}
-                                kljadjkjn
+                                <h2>Lista de Desejo</h2>
+                               <p>Você ainda não adicionou nada na sua lista de desejo</p>
                 
                             </p>
                         </div>

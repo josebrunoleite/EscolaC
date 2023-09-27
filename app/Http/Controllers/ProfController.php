@@ -14,8 +14,9 @@ class ProfController extends Controller
     }
     public function homeProf()
     {
+        $autor = auth()->user()->name;
         //echo "hola";
-        $cursos = cursos::all();
+        $cursos = cursos::where('autor', $autor)->get();
         return view('prof.home', compact('cursos'));
     }
     public function tabelaProva()
@@ -78,5 +79,10 @@ class ProfController extends Controller
         $curso = cursos::findorfail($id);
         $curso->delete();
         return redirect()->back()->with('success', 'Curso deletado com sucesso!');
+    }
+    public function showAula()
+    {
+        $aulas = Aula::all();
+        return view('tabelas.tabelasAula', compact('aulas'));
     }
 }

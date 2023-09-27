@@ -59,7 +59,17 @@
                                     <input type="text" name="duracio" class="form-control" id="duracio"
                                         placeholder="Insira o titulo da questão">
                                 </div>
-                                <input type="disable" id="selectedData" name="selectedData">
+                                <div class="">
+                                    <select multiple="multiple" name="duallistbox_permissions[]" id="provaAula">
+                                        @foreach($questaos as $questao)
+                                            <option value="{{ $questao->id }}">{{ $questao->questao }}</option>
+                                        @endforeach
+                                        @foreach($provas as $prova)
+                                            <option value="{{ $prova->id }}">{{ $prova->prova }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <input type="hidden" id="selectedData" name="selectedData">
                                 <!-- Referencia -->
                                 <div class="form-group">
                                     <label for="linkVideo">Referencia</label>
@@ -71,30 +81,18 @@
                                     <textarea class="form-control"  id="comentarioAutor" rows="4" placeholder="Digite o comentário do autor"></textarea>
                                 </div> --}}
                             </div>
-                            <div class="form-group">
-                                <label for="imagem">Imagem</label>
-                                <input type="file" name="imagem" class="form-control-file" id="imagem">
+                            <div class="form-group ">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="img" id="img">
+                                    <label class="custom-file-label" for="img">Choose file</label>
+                                  </div>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary" id="btnSalvar">Enviar</button>
                             </div>
                         </form>
                     </div>
-                    <div class="">
-                        <select multiple="multiple" name="duallistbox_permissions[]" id="provaAula">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                            <option value="option4">Option 4</option>
-                            <option value="option5">Option 5</option>
-                            <option value="option6" selected="selected">Option 6</option>
-                            <option value="option7">Option 7</option>
-                            <option value="option8">Option 8</option>
-                            <option value="option9">Option 9</option>
-                            <option value="option0">Option 10</option>
-                        </select>
-                        <button id="btnSalvar" type="submit">Salvar</button>
-                    </div>
+
                     <!-- /.card -->
                 </div>
             </div>

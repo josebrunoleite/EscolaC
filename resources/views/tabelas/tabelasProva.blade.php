@@ -48,19 +48,19 @@ $users = [
                                 {{ session('success') }}
                             </div>
                         @endif
-                        <h3 class="card-title">Tabela de Provas Existentes</h3>
+                        <h3 class="card-title">Tabela de Questão Existentes</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example1" class="{{-- table-responsive --}}table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th class="">Titulo</th>
+                                    <th class="">ID</th>
                                     <th class="d-none d-md-table-cell">Curso</th>
-                                    <th class="d-none d-md-table-cell">Aula</th>
-                                    <th class="d-none d-md-table-cell">Quem Criou</th>
-                                   <th class="d-none d-md-table-cell">Identificação</th>
-                                    <th class="d-md-table-cell">Editar/Pagamento</th>
+                                    <th class="d-none d-md-table-cell">Questão</th>
+                               {{--    <th class="d-none d-md-table-cell">Resposta?</th>
+                                    <th class="d-none d-md-table-cell">Identificação</th>
+                                    <th class="d-md-table-cell">Editar/Pagamento</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,16 +68,16 @@ $users = [
                        @foreach ($aulas as $aula)
                                     <tr>
 
-                                        <td>{{ $aula->titulo ?? 'Error Contate José' }}</td>
+                                        <td>{{ $aula->id ?? 'Error Contate José' }}</td>
                                         <td class="d-none d-md-table-cell">{{ $aula->curso ?? 'Error Contate José' }}
                                         </td>
-                                        <td class="d-none d-md-table-cell">{{ $aula->aula ?? 'Error Contate José' }}
+                                        <td class="d-none d-md-table-cell">{{ $aula->questao ?? 'Error Contate José' }}
                                         </td>
-                                        <td class="d-none d-md-table-cell">{{ $aula->presenca ?? 'Error Contate José' }}</td>
+{{--                                         <td class="d-none d-md-table-cell">{{ $aula->presenca ?? 'Error Contate José' }}</td>
                                        <td class="d-none d-md-table-cell">{{ $aula->id ?? 'Error Contate José' }}</td>
                                             <td class="d-md-table-cell">
                                             <a href="{{ url('editAula/' . $aula->id  ) }}">Editar</a>//
-                                            <a href="{{ url('deleteAula/'  . $aula->id  ) }}">Deletar</a>
+                                            <a href="{{ url('deleteAula/'  . $aula->id  ) }}">Deletar</a> --}}
                                         </td>
 
                                     </tr>

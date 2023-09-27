@@ -30,12 +30,12 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-around">
                 <div>
-                  {{-- <a class="navbar-brand" href="#"></a>--}}
-                    <a href="#" class="btn btn-success m-1">Adicionar Novo Curso</a>
+                    {{-- <a class="navbar-brand" href="#"></a> --}}
+                    <a href="{{route('CreateCurso.show')}}" class="btn btn-success m-1">Adicionar Novo Curso</a>
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
                 </div>
                 <div class="align-content-end ">
-                    
+
                     <a href="#" class="btn btn-info m-1">Estatistica</a>
                     <a href="#" class="btn btn-danger m-1">Sair</a>
                 </div>
@@ -48,165 +48,84 @@
             <!-- Primeira linha com 4 cards -->
             <div class="">
                 <div class="col-12 text-center mt-1">
-                    <h2>Painel Administradores</h2>
+                    <h2>Painel Do Professor</h2>
+                    @if (session('error'))
+                        <div class="card-header card-color-sucess">
+                            <h3 class="card-title">{{ session('error') }}</h3>
+                        </div>
+                    @endif
+                    @if (session('success'))
+                        <div class="card-header card-color-sucess">
+                            <h3 class="card-title">{{ session('success') }}</h3>
+                        </div>
+                    @endif
                     <div class="d-flex justify-content-center mt-1 flex-wrap">
-
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
+                        @foreach ($cursos as $curso)
+                            <div class="card tamanho">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-around ">
+                                        <img src="{{ asset('curso/' . $curso->img) }}" style="width: 250px; height: 114px">
                                         <div>
+                                            <p class="card-text">
+                                            <div>
 
-                                            Nome: José
+                                                Nome: {{ $curso->nome }}
 
-                                            <br>
+                                                <br>
 
-                                            Professor: José 
+                                                Professor: {{ $curso->autor }}
 
-                                            <br>
+                                                <br>
 
-                                            tipo: Informatica
+                                                tipo: {{ $curso->tipo }}
+                                                </p>
+                                            </div>
                                             </p>
                                         </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
                                         <div>
+                                            <p class="card-text">
+                                            <div>
 
-                                            Duranção: 24H
+                                                Duranção: {{ $curso->duracio ?? 'Sem nenhuma aula' }}
 
-                                            <br>
+                                                <br>
 
-                                            Q.Alunos:
+                                                Q.Alunos: {{ $curso->possui ?? 'Ninguem Comprou' }}
 
-                                            <br>
+                                                <br>
 
-                                            Ultima Atualização:
+                                                Ultima Atualização: {{ $curso->tipo }}
 
+                                            </div>
+                                            </p>
                                         </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
+                                        <div>
+                                            <div class="text-center">
+                                                @if ($curso->liberado === 'true')
+                                                    <a href="{{ url('alterarLiberado', $curso->id) }}"
+                                                        class="btn btn-warning">Curso Liberado</a>
+                                                @else
+                                                    <a href="{{ url('alterarLiberado', $curso->id) }}"
+                                                        class="btn btn-primary">Curso Não Liberado</a>
+                                                @endif
+                                                <br>
+                                                <a href="#" class="btn btn-success m-1">Informaçãos</a>
+                                                <br>
+                                                <a href="{{ url('cursosDelete', $curso->id) }}"
+                                                    class="btn btn-danger m-1">Excluir</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
+                        @endforeach
 
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
 
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José 
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card tamanho">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around ">
-                                    <img src="{{ $image }}" style="width: 250px; height:114px">
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Nome: José
-
-                                            <br>
-
-                                            Professor: José
-
-                                            <br>
-
-                                            tipo: Informatica
-                                            </p>
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="card-text">
-                                        <div>
-
-                                            Duranção: 24H
-
-                                            <br>
-
-                                            Q.Alunos:
-
-                                            <br>
-
-                                            Ultima Atualização:
-
-                                        </div>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-primary m-1">Liberar</a>
-                                            <br>
-                                            <a href="#" class="btn btn-success m-1">Informaçãos</a>
-                                            <br>
-                                            <a href="#" class="btn btn-danger m-1">Excluir</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
     </section>

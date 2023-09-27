@@ -119,70 +119,57 @@
                     <h2>Cursos Recomendados</h2>
                 </div>
 
-
+                {{-- @dd($cursos); --}}
                 <div class="row">
-                    @for ($i = 0; $i < 4; $i++)
-                        <div class="col">
-                            <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%"
-                                        fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                                <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                        </div>
-                                        <small class="text-body-secondary">9 mins</small>
+                    {{--  @for ($i = 0; $i < 4; $i++) --}}
+
+                    @foreach ($cursos as $curso)
+                        <div class="card shadow-sm" style="max-width: 20%; max-height: 20%; margin: 10px">
+                            <title>{{ $curso->nome }}</title>
+                            <img src="{{ asset('curso/' . $curso->img) }}" alt=""
+                                style="max-width: 100%; max-height: 120px;">
+
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $curso->nome }}.</h5>
+                                <p class="card-text">{{ $curso->duracio ?? 'sem descrição' }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
+                    {{-- #endfor --}}
                 </div>
             </div>
 
 
-        </div>
+            <hr>
 
-        <hr>
-
-        <!-- Título e segunda linha com 6 cards -->
-        <h2 class="text-center">Aba de Cursos</h2>
-        <div class="text-center">
-            <h1>Cursos Disponiveis</h1>
-          </div>
-            <div class="card-columns">
-                @for ($i = 0; $i < 3; $i++)
-              <div class="card">
-                <a href="#">
-                <img class="card-img-top"  src="{{$image}}" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque, dolorum ea eos et excepturi explicabo facilis harum illo impedit incidunt laborum laudantium...
-                  </p>
-{{--                   <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
- --}}              </div>
-                </a>
+            <div class="text-center">
+                <h1>Cursos Disponiveis</h1>
             </div>
-            @endfor
-
-
-
-
-              
+            <div class="card-columns content">
+                <div class="row mb-4">
+                    @for ($i = 0; $i < 3; $i++)
+                    @foreach ($cursos as $curso)
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img src="{{ asset('curso/' . $curso->img) }}" class="card-img-top" alt="Imagem do Curso">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $curso->nome }}</h5>
+                                    <p class="card-text">{{ $curso->descricao }}</p>
+                                    <a href="#" class="btn btn-primary">Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    @endfor
+                </div>
             </div>
-          </div>
+        </div>
 
-        </div>
-        </div>
     </section>
 
     {{-- </div> --}}

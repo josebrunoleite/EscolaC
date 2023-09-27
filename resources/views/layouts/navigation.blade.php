@@ -15,7 +15,7 @@
                 <a href="{{ route('home') }}" class="nav-link">
                     <i class="nav-icon fas fa-th text-primary"></i>
                     <p>
-                        {{ __('Dashboard') }}
+                        {{ __('Home') }}
                     </p>
                 </a>
             </li>
@@ -64,15 +64,7 @@
                     <li class="nav-item">
                         <a href="{{ route('another.show') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview" style="display: none;">
-                    <li class="nav-item">
-                        <a href="{{ route('CreateCurso.show') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
+                            <p>Duvidas</p>
                         </a>
                     </li>
                 </ul>
@@ -80,11 +72,13 @@
                     <li class="nav-item">
                         <a href="{{ route('another.show') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
+                            <p>Entre em Contato</p>
                         </a>
                     </li>
                 </ul>
             </li>
+            @if(Auth::user()->role == 'admin')
+            @if(Auth::user()->role == 'prof' || Auth::user()->role == 'admin')
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon text-warning"></i>
@@ -95,14 +89,6 @@
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('Aula.tabela') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Tabela Prova</p>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav nav-treeview" style="display: none;">
-                    <li class="nav-item">
                         <a href="{{ route('Prof.home') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Gerenciador</p>
@@ -111,9 +97,25 @@
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
+                        <a href="{{ route('Aula.tabela') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tabela Questão</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('Aula.tabela2') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Tabela Aulas</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
                         <a href="{{ route('Prova.create') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Criar Prova</p>
+                            <p>Criar Questão</p>
                         </a>
                     </li>
                 </ul>
@@ -125,7 +127,17 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('CreateCurso.show') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Criar Curso</p>
+                        </a>
+                    </li>
+                </ul>
+                
             </li>
+            @endif
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon text-danger"></i>
@@ -144,9 +156,9 @@
                 </ul>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('another.show') }}" class="nav-link">
+                        <a href="{{ route('CursoPend.tabela') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Pagamentos</p>
+                            <p>Tabela de Curso Pendente</p>
                         </a>
                     </li>
                 </ul>
@@ -167,6 +179,7 @@
                     </p>
                 </a>
             </li> --}}
+            @endif
             <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>

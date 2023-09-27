@@ -48,16 +48,16 @@ $users = [
                                 {{ session('success') }}
                             </div>
                         @endif
-                        <h3 class="card-title">Tabela de Provas Existentes</h3>
+                        <h3 class="card-title">Tabela de Questão Existentes</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example1" class="{{-- table-responsive --}}table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th class="">Prova</th>
+                                    <th class="">Id</th>
                                     <th class="d-none d-md-table-cell">Curso</th>
-                                    <th class="d-none d-md-table-cell">Quantidade de questão</th>
+                                    <th class="d-none d-md-table-cell">s de questão</th>
                                     <th class="d-none d-md-table-cell">Quantidade </th>
                                    {{--  <th class="d-none d-md-table-cell">Identificação</th>
                                     <th class="d-md-table-cell">Editar/Pagamento</th> --}}
@@ -65,23 +65,14 @@ $users = [
                             </thead>
                             <tbody>
                                
-                       @foreach ($users as $user)
+                       @foreach ($cursos as $curso)
                                     <tr>
 
-                                        <td>{{ $user->name ?? 'Error Contate José' }}</td>
-                                        <td class="d-none d-md-table-cell">{{ $user->setor1 ?? 'Error Contate José' }}
+                                        <td>{{ $curso->id ?? 'Error Contate José' }}</td>
+                                        <td class="d-none d-md-table-cell">{{ $curso->questao ?? 'Error Contate José' }}
                                         </td>
-                                        <td class="d-none d-md-table-cell">{{ $user->setor2 ?? 'Error Contate José' }}
-                                        </td>
-                                        <td class="d-none d-md-table-cell">{{ $user->on ?? 'Error Contate José' }}</td>
-                                       {{-- <td class="d-none d-md-table-cell">{{ $user->id ?? 'Error Contate José' }}</td>
-                                            --}}<td class="d-md-table-cell"><a
-                                             href="{{ url('modyfiV/' /* . $user->id */ ) }}">Editar</a> //
-                                            <a href="{{ url('pagamentofiV/' /* . $user->id  */) }}">Deletar</a>
-                                            <!-- <a href="#" class="text-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#confirmDeleteModal" id="deleteButton" data-bs-id="A">
-                                                        Excluir</a>--> 
-                                        </td>
+                                        <td class="d-none d-md-table-cell">{{ $curso->img ?? 'Não Possue' }}
+                                        </td>       
 
                                     </tr>
                                 @endforeach

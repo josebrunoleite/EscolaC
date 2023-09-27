@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
     /* User Mod */
     Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
-    Route::get('aula', [\App\Http\Controllers\UserController::class, 'aula'])->name('users.index');
+    Route::get('aula', [\App\Http\Controllers\UserController::class, 'aula'])->name('aula.index');
 
     /* modder */
     Route::get('formulario', [App\Http\Controllers\HomeController::class, 'formulario'])->name('formulario');
@@ -51,9 +51,10 @@ Route::middleware('auth')->group(function () {
     Route::get('criarAula', [\App\Http\Controllers\ProfController::class, 'criarAula'])->name('Aula.create');
     /* Prova */
     Route::get('criarProva', [\App\Http\Controllers\ProfController::class, 'criarProva'])->name('Prova.create');
-    Route::get('tabelaAula', [\App\Http\Controllers\ProfController::class, 'tabelaAula'])->name('Aula.tabela');
+    Route::get('tabelaAula', [\App\Http\Controllers\ProfController::class, 'showQuestao'])->name('Aula.tabela');
     
-    /* */
+    /* Arrumar Curso*/
+    Route::get('alterarLiberado/{id}', [\App\Http\Controllers\AdminController::class, 'alterarLiberado'])->name('Curso.alterar');
     /* Aula */
     Route::post('storeAula', [\App\Http\Controllers\CursoController::class, 'storeAula'])->name('Aula.store');
     Route::get('deleteAula/{id}', [\App\Http\Controllers\CursoController::class, 'deleteAula'])->name('Aula.delete');
@@ -63,6 +64,9 @@ Route::middleware('auth')->group(function () {
     Route::post('storeQuestao', [\App\Http\Controllers\CursoController::class, 'storeQuestao'])->name('Questao.store');
     /* Tabela */
     Route::get('tabelaAula', [\App\Http\Controllers\CursoController::class, 'showAula'])->name('Aula.tabela');
+    route::get('tabelaCursoPend', [\App\Http\Controllers\AdminController::class, 'tabelaCursoPend'])->name('CursoPend.tabela');
+    Route::get('tabelaAulas', [\App\Http\Controllers\ProfController::class, 'showAula'])->name('Aula.tabela2');
+
     /* Pagamento */
     Route::get('carrinho', [\App\Http\Controllers\PagamentoController::class, 'homeCarrinho'])->name('carrinho.home');
     /* Pessoal */

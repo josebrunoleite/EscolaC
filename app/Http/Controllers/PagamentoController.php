@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\cursos;
 use Illuminate\Http\Request;
+
 
 class PagamentoController extends Controller
 {
@@ -13,6 +15,7 @@ class PagamentoController extends Controller
     public function homeCarrinho()
     {
         //echo "hola";
-       return view('pagamento.carrinho');
+        $cursos = cursos::all();
+       return view('pagamento.carrinho',compact('cursos'));  
     }
 }

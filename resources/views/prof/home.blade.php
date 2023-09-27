@@ -31,12 +31,12 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-around">
                 <div>
                   {{-- <a class="navbar-brand" href="#"></a>--}}
-                    <a href="#" class="btn btn-success m-1">Requisitar Um Novo Curso</a>
-                    <a href="#" class="btn btn-info m-1">Andamento do Curso</a>
+                    <a href="{{route('CreateCurso.show')}}" class="btn btn-success m-1">Requisitar Um Novo Curso</a>
+                    <a href="{{route('CursoPend.tabela')}}" class="btn btn-info m-1">Andamento do Curso</a>
                 </div>
                 <div class="align-content-end ">
                     
-                    <a href="#" class="btn btn-info m-1">Criar Aula</a>
+                    <a href="{{route('Aula.create')}}" class="btn btn-info m-1">Criar Aula</a>
                     <a href="#" class="btn btn-danger m-1">Sair</a>
                 </div>
             </nav>
@@ -56,7 +56,7 @@
                         <div class="card tamanho">
                             <div class="card-body">
                                 <div class="d-flex justify-content-around ">
-                                    <img src="{{ $curso->img }}" style="width: 250px; height:114px">
+                                    <img src="{{ asset('curso/' . $curso->img) }}" style="width: 250px; height: 114px">
                                     <div>
                                         <p class="card-text">
                                         <div>
@@ -93,7 +93,13 @@
                                     </div>
                                     <div>
                                         <div class="text-center">
-                                            <a href="" class="btn btn-primary m-1">Liberar</a>
+                                            @if ($curso->liberado === 'true')
+                                                <a href="{{ url('alterarLiberado', $curso->id) }}"
+                                                    class="btn btn-warning">Curso Liberado</a>
+                                            @else
+                                                <a href="#"
+                                                    class="btn btn-primary">Curso Não Liberado</a>
+                                            @endif
                                             <br>
                                             <a href="#" class="btn btn-success m-1">Informaçãos</a>
                                             <br>
