@@ -65,7 +65,7 @@
                             <table>
                                 <tr>
                                     <td><img width="300" height="150"
-                                            src='https://e1.pxfuel.com/desktop-wallpaper/290/380/desktop-wallpaper-tantei-wa-mou-shindeiru-siesta-tantei.jpg' />
+                                            src='https://cdn.discordapp.com/attachments/954712125916463144/1156409644139429888/Jose.jpg?ex=6514dde8&is=65138c68&hm=d889b8cdd4a2b6f23e0313e17c40874442ec65af0d36a7f274404198fba7c8ea&' />
                                     </td>
                                     <td class="fw-bold">
                                         José Bruno Leite é a mente atrás dos códigos, podemos dizer que ele é o admin
@@ -79,7 +79,7 @@
                             <table>
                                 <tr>
                                     <td><img width="300" height="150"
-                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuWEHeNVOk6nG7ejjrwqi4xb_7K7DAm_Sv_Q&usqp=CAU' />
+                                            src='https://cdn.discordapp.com/attachments/954712125916463144/1156409644391079966/Geovani.jpg?ex=6514dde8&is=65138c68&hm=91448ab83252b5060d1d4301adc4e795bcd41259ed6393b517109af7f8aef06b&' />
                                     </td>
                                     <td class="fw-bold">
                                         Geovani Cordeiro, ele é responsavel pela parte da documentação do site, antes de
@@ -91,10 +91,10 @@
                             <table>
                                 <tr>
                                     <td><img width="300" height="150"
-                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7q0K62SjSp3_kYTJsrDOVyIFvpmS-4rCBw&usqp=CAU' />
+                                            src='https://cdn.discordapp.com/attachments/954712125916463144/1156409643829035110/Joao.jpg?ex=6514dde8&is=65138c68&hm=4ddf811cdf6fdc6db591ce13a4b675b766d4e003d5e3e509fa7db3cdcedd7dcd&' />
                                     </td>
                                     <td class="fw-bold">
-                                        João Lucas, é corno e filho da gota! Ele é o manda-chuva do time, ele é responsavel também por comandar o
+                                        João Lucas, Ele é o manda-chuva do time, ele é responsavel também por comandar o
                                         grupo e não deixa-los perdidos em o que deve fazer, mas ele não só manda, ele também
                                         está com a mão na massa, seja com a parte de documentação ou da parte do código.
                                     </td>
@@ -103,10 +103,10 @@
                             <table>
                                 <tr>
                                     <td><img width="300" height="150"
-                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSruAckKcaQ9sZOJ_K4hXf36_LrcaI3zlv3pg&usqp=CAU' />
+                                            src='https://cdn.discordapp.com/attachments/954712125916463144/1156409246016098314/Ricardo.jpg?ex=6514dd89&is=65138c09&hm=ca1019f99dc0a785788dffef404e05ad96381b8d083ed5d065dc9189b652448b&' />
                                     </td>
                                     <td class="fw-bold">
-                                        Ricardo Ramos, foi responsavel pela experiência do usurio, logo, e nome, ele é o Zé faz tudo,
+                                        Ricardo Ramos, foi responsavel pela experiência do usuario, logo, e nome do site, ele é o Zé faz tudo,
                                         qualquer coisa que derem pra ele, mesmo com dificuldades não vai desistir e tentará entender como
                                         se faz as coisas, criativo para dar ideias.
                                     </td>
