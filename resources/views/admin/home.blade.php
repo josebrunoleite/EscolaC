@@ -48,7 +48,7 @@
             <!-- Primeira linha com 4 cards -->
             <div class="">
                 <div class="col-12 text-center mt-1">
-                    <h2>Painel Do Professor</h2>
+                    <h2>Painel Do Administrador</h2>
                     @if (session('error'))
                         <div class="card-header card-color-sucess">
                             <h3 class="card-title">{{ session('error') }}</h3>
