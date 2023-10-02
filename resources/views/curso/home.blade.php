@@ -160,7 +160,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $curso->nome }}</h5>
                                     <p class="card-text">{{ $curso->descricao }}</p>
-                                    <a href="#" class="btn btn-primary">Detalhes</a>
+                                    <a href="{{route('aula.index')}}" class="btn btn-primary">Detalhes</a>
                                 </div>
                             </div>
                         </div>
