@@ -41,9 +41,16 @@ function adicionarComentario() {
             width: 100%;
             height: auto;
         }
+        @media (max-width: 768px) {
+        .mobi {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
     </style>
 @section('content')
-    <div class="container d-flex justify-content-bebetween">
+    <div class="container mobi d-flex justify-content-bebetween">
         <div class="sidebar" style="margin: 0 40px 0 0">
             
             <ul class="">
@@ -56,8 +63,9 @@ function adicionarComentario() {
             </ul>
         </div>
         <div class="content">
+            <div class="container-fluid">
             <h1>Aulas de Html e CSS em 5 minutos</h1>
-            <iframe width="560" height="315" src="{{ $_GET['valor'] ?? 'https://www.youtube.com/embed/A1BaZr82XJI?si=ZKj3bZbpvm7GQt-9'}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="800" height="450" class="img-fluid" src="{{ $_GET['valor'] ?? 'https://www.youtube.com/embed/A1BaZr82XJI?si=ZKj3bZbpvm7GQt-9'}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="comments">
                 <h3>Comentários</h3>
                 <div class="comment-form">
@@ -68,7 +76,7 @@ function adicionarComentario() {
                     <li class="comment">josebrunoleite: Excelente</li>
 
                 </ul>
-
+            </div>
             </div>
         </div>
     </div>

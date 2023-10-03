@@ -133,9 +133,11 @@
                                 <h5 class="card-title">{{ $curso->nome }}.</h5>
                                 <p class="card-text">{{ $curso->duracio ?? 'sem descrição' }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{{route('aula.index')}}">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                     </div>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +162,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $curso->nome }}</h5>
                                     <p class="card-text">{{ $curso->descricao }}</p>
-                                    <a href="{{route('aula.index')}}" class="btn btn-primary">Detalhes</a>
+                                    <a href="#" class="btn btn-primary">Detalhes</a>
                                 </div>
                             </div>
                         </div>

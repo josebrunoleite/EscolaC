@@ -22,11 +22,17 @@
                         <div class="card-body text-center">
                             <p class="card-text">
                                 Bem Vindo! {{ Auth::user()->name }}, você veio no lugar certo para fazer um curso!<br>
-                                Aqui é o lugal aonde o filho chora e a mãe não vê, aqui é o lugar aonde você vai aprender a esconder seu choro e tentar algo de ultil na sua vida!
+                                Aqui é o lugal aonde o filho chora e a mãe não vê, aqui é o lugar aonde você vai aprender a
+                                esconder seu choro e tentar algo de ultil na sua vida!
                             </p>
-                            <img src="https://media.discordapp.net/attachments/980565925235425360/1156326987829350412/image.png?ex=651490ed&is=65133f6d&hm=82437eaa5d1a3be8fafe4105d5b0b81221194c1023be5259437fd04e64b4b35f&=" alt="" height="450px">
-                            <p>Venha conhecer a nossas loucuras e aprender a se torna pessoas uteis para sociedade! Bem vindo a escola Sulcelso!!!</p>
-                            <p class="fs-3">Não se esqueçam, que a resposta de qualquer pergunta é <strong> SL</strong></p>
+                            <div>
+                                <img src="https://media.discordapp.net/attachments/980565925235425360/1156326987829350412/image.png?ex=651490ed&is=65133f6d&hm=82437eaa5d1a3be8fafe4105d5b0b81221194c1023be5259437fd04e64b4b35f&="
+                                    alt="" class="img-fluid">
+                            </div>
+                            <p>Venha conhecer a nossas loucuras e aprender a se torna pessoas uteis para sociedade! Bem
+                                vindo a escola Sulcelso!!!</p>
+                            <p class="fs-3">Não se esqueçam, que a resposta de qualquer pergunta é <strong> SL</strong>
+                            </p>
                         </div>
                     </div>
                 </div>

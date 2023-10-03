@@ -32,7 +32,7 @@
                 <a href="{{ route('cursoHome') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card text-success"></i>
                     <p>
-                        Meus Cursos
+                        Aulas
                     </p>
                 </a>
             </li>
@@ -40,18 +40,18 @@
                 <a href="{{ route('another.show') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card text-success"></i>
                     <p>
-                        Lista de Desejo
+                        Aula favoritas
                     </p>
                 </a>
             </li>
-            <li class="nav-item">
+           {{--  <li class="nav-item">
                 <a href="{{ route('carrinho.home') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card text-success"></i>
                     <p>
                         Carrinho
                     </p>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon text-info"></i>
@@ -77,8 +77,8 @@
                     </li>
                 </ul>
             </li>
-            @if(Auth::user()->role == 'admin')
-            @if(Auth::user()->role == 'prof' || Auth::user()->role == 'admin')
+
+            @if(Auth::user()->role == 'professor' || Auth::user()->role == 'admin')
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon text-warning"></i>
@@ -138,6 +138,7 @@
                 
             </li>
             @endif
+            @if(Auth::user()->role == 'admin')
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon text-danger"></i>
